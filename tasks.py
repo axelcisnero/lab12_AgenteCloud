@@ -2,6 +2,8 @@ def agregar_tarea(tareas, titulo, categoria):
     titulo = titulo.strip()
     if not titulo:
         raise ValueError("El título es obligatorio")
+    if categoria is None:
+        raise ValueError("La categoría es obligatoria")
     categoria = categoria.strip()
     if not categoria:
         raise ValueError("La categoría es obligatoria")
